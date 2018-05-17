@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # vuex-shopping-cart
 
 > A Vue.js project
@@ -28,3 +29,7 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
+# vuex-shoppingCart
+vuex demo
+>>>>>>> 6c17b6abfeebe76449adbe1889b0e8dcba581b95
