@@ -29,12 +29,15 @@
   </div>
 </template>
 <script>
+import {mapGetters} from 'vuex'
+
 export default {
   name: 'cart',
   data () {
-    return {
-      cartProducts: []
-    }
+    return {}
+  },
+  computed: {
+    ...mapGetters(['cartProducts'])
   }
 }
 </script>
