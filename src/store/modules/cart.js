@@ -1,6 +1,6 @@
 
 const state = {
-  //商品列表
+  // 商品列表
   shop_list: [
     {
       id: 11,
@@ -27,12 +27,12 @@ const state = {
 }
 
 const getters = {
-  //商品列表
-  shoplist:state => state.shop_list,
-  //购物车的列表
-  cartProducts:state => {
+  // 商品列表
+  shoplist: state => state.shop_list,
+  // 购物车的列表
+  cartProducts: state => {
     return state.added.map(({id, num}) => {
-      let product = state.shop_list.find(n=>n.id == id)
+      let product = state.shop_list.find(n => n.id === id)
       return {
         ...product,
         num
@@ -42,7 +42,7 @@ const getters = {
 }
 
 const actions = {
-  //添加到购物车操作
+  // 添加到购物车操作
   addToCart ({commit}, product) {
     commit('add', {
       id: product.id
@@ -51,9 +51,9 @@ const actions = {
 }
 
 const mutations = {
-  //添加到购物车操作
+  // 添加到购物车操作
   add (state, {id}) {
-    let record = state.added.find(n=>n.id == id)
+    let record = state.added.find(n => n.id === id)
     if (!record) {
       state.added.push({
         id,
