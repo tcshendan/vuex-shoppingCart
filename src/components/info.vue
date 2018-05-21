@@ -13,13 +13,15 @@
   </div>
 </template>
 <script>
+import {mapGetters} from 'vuex'
+
 export default {
   name: 'info',
   data () {
-    return {
-      totalNum: 13,
-      totalPrice: 342
-    }
+    return {}
+  },
+  computed: {
+    ...mapGetters(['totalPrice', 'totalNum'])
   }
 }
 </script>

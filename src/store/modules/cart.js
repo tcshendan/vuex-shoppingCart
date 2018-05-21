@@ -38,6 +38,22 @@ const getters = {
         num
       }
     })
+  },
+  // 计算总价
+  totalPrice: (state, getters) => {
+    let total = 0
+    getters.cartProducts.forEach(n => {
+      total += n.price * n.num
+    })
+    return total
+  },
+  // 计算总数量
+  totalNum: (state, getters) => {
+    let total = 0
+    getters.cartProducts.forEach(n => {
+      total += n.num
+    })
+    return total
   }
 }
 
