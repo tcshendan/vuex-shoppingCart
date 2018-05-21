@@ -67,6 +67,10 @@ const actions = {
   // 清除购物车
   clearAllCart ({commit}) {
     commit('clearAll')
+  },
+  // 删除购物车的指定的商品
+  delProduct ({commit}, product) {
+    commit('del', product)
   }
 }
 
@@ -86,6 +90,14 @@ const mutations = {
   // 清除购物车
   clearAll (state) {
     state.added = []
+  },
+  // 删除购物车的指定的商品
+  del (state, product) {
+    state.added.forEach((n, i) => {
+      if (n.id === product.id) {
+        state.added.splice(i, 1)
+      }
+    })
   }
 }
 

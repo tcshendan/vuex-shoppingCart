@@ -18,7 +18,7 @@
           <td>{{shop.price}}</td>
           <td>{{shop.num}}</td>
           <td>
-            <div class="btn btn-danger btn-sm">删除</div>
+            <div class="btn btn-danger btn-sm" @click="delProduct(shop)">删除</div>
           </td>
         </tr>
         <tr v-if="!cartProducts.length">
@@ -29,7 +29,7 @@
   </div>
 </template>
 <script>
-import {mapGetters} from 'vuex'
+import {mapGetters, mapActions} from 'vuex'
 
 export default {
   name: 'cart',
@@ -38,6 +38,9 @@ export default {
   },
   computed: {
     ...mapGetters(['cartProducts'])
+  },
+  methods: {
+    ...mapActions(['delProduct'])
   }
 }
 </script>
