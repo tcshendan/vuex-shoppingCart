@@ -8,12 +8,12 @@
       <div class='item'>总价：
         <strong>{{totalPrice}}</strong>
       </div>
-      <div class="item btn btn-danger">清空购物车</div>
+      <div class="item btn btn-danger" @click="clearAllCart">清空购物车</div>
     </div>
   </div>
 </template>
 <script>
-import {mapGetters} from 'vuex'
+import {mapGetters, mapActions} from 'vuex'
 
 export default {
   name: 'info',
@@ -22,6 +22,9 @@ export default {
   },
   computed: {
     ...mapGetters(['totalPrice', 'totalNum'])
+  },
+  methods: {
+    ...mapActions(['clearAllCart'])
   }
 }
 </script>

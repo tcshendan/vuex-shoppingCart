@@ -63,6 +63,10 @@ const actions = {
     commit('add', {
       id: product.id
     })
+  },
+  // 清除购物车
+  clearAllCart ({commit}) {
+    commit('clearAll')
   }
 }
 
@@ -78,6 +82,10 @@ const mutations = {
     } else {
       record.num++
     }
+  },
+  // 清除购物车
+  clearAll (state) {
+    state.added = []
   }
 }
 
